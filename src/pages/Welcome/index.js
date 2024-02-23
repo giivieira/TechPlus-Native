@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity , Image, StatusBar, ImageBackg
 import fundowelcome from '../../assets/fundo-welcome.png'
 
 const Welcome = () => (
+  
   <View style={styles.container}>
     <ImageBackground source={fundowelcome} resizeMode="cover" style={styles.image}>
       
@@ -15,12 +16,8 @@ const Welcome = () => (
       <TouchableOpacity style={styles.btn1}
         onPress={() => NavigationPreloadManager.navigate('comecar')}
         >
-        {/* <Text style={styles.txt}>Criar conta</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.btn2}
-        onPress={() => NavigationPreloadManager.navigate('Entrar')}
-        > */}
         <Text style={styles.txt}>COMEÇAR</Text>
+
 
       </TouchableOpacity>
     </ImageBackground>
@@ -51,14 +48,6 @@ const styles = StyleSheet.create({
     top: '-10%',
     alignSelf: 'center'
   },
-//   btn2: {
-//     backgroundColor: '#000',
-//     width: 120,
-//     height: 40,
-//     borderRadius: 30,
-//     left: 50,
-//     top: '5%'
-//   },
   txt: {
     color: '#fff',
     textAlign: 'center',
