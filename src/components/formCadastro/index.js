@@ -2,31 +2,6 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackgr
 import fundowelcome from '../../assets/fundo-welcome.png'
 
 export default function form({ }) {
-
-  // const [fontsLoaded, fontError] = useFonts({
-  //     'Poppins-Black': require('../../../fonts'),
-  //     'Poppins-Bold': require('../../../fonts'),
-  //     'Poppins-ExtraBold': require('../../../fonts'),
-  //     'Poppins-ExtraLight': require('../../../fonts'),
-  //     'Poppins-Light': require('../../../fonts'),
-  //     'Poppins-Medium': require('../../../fonts'),
-  //     'Poppins-Regular': require('../../../fonts'),
-  //     'Poppins-SemiBold': require('../../../fonts'),
-  //     'Poppins-Thin': require('../../../fonts'),
-  // });
-
-  // const navigation = useNavigation();
-
-  // const onLayoutRootView = useCallback(async () => {
-  //     if (fontsLoaded) {
-  //         await SplashScreen.hideAsync();
-  //     }
-  // }, [fontsLoaded]);
-
-  // if (!fontsLoaded) {
-  //     return null;
-  // }
-
   return (
 
 
@@ -44,11 +19,8 @@ export default function form({ }) {
             <TextInput style={styles.input} onChangeText={(e) => setCpf(e)} placeholder="Insira um e-mail"/>
             <Text style={styles.txt2}>Senha</Text>
             <TextInput style={styles.input} onChangeText={(e) => setPassword(e)} placeholder="Insira uma senha" secureTextEntry={true} />
-            <TouchableOpacity style={styles.btnentrar}>
-                <Text style={styles.action}>ENTRAR</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.novo}>Sou novo (a) aqui</Text>
+            <TouchableOpacity style={styles.btn}>
+                <Text style={styles.action}>CRIAR CONTA</Text>
             </TouchableOpacity>
         </View>
       </ImageBackground>
@@ -72,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     top: '-22%',
   },
-  btnentrar: {
+  btn: {
     backgroundColor: '#000',
     width: 180,
     height: 40,
@@ -116,14 +88,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: 300,
     marginLeft: 50,
-  },
 
-  novo:{
-    color: '#5CE0E4',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontSize: 15,
-    top: '-400%',
   }
 
 });
